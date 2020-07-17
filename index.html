@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>camera demo</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .camera-input-container {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+      }
+      .camera-input-container > .camera-input {
+        width: 100px;
+        height: 100px;
+      }
+      .camera-input-container > .tip {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #eee;
+        border-radius: 50%;
+        line-height: 100px;
+        text-align: center;
+        cursor: pointer;
+        pointer-events: none;
+      }
+      .camera-photo {
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="camera-input-container">
+      <input
+        type="file"
+        accept="image/*"
+        capture="camera"
+        class="camera-input"
+        id="camera-input"
+      />
+      <div class="tip">点击拍照</div>
+    </div>
+    <script src="lib/exif.js"></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
